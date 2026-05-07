@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a1628"/>
+      <stop offset="45%" stop-color="#1e3a5f"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <radialGradient id="r" cx="25%" cy="20%" r="70%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.45"/>
+      <stop offset="55%" stop-color="#1e3a5f" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#0a1628" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="800" fill="url(#g)"/>
+  <rect width="800" height="800" fill="url(#r)"/>
+  <rect x="32" y="32" width="736" height="736" fill="none" stroke="#7dd3fc" stroke-opacity="0.5" stroke-width="5" rx="20"/>
+  <text x="400" y="240" text-anchor="middle" fill="#ffffff" font-size="72" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="700">
+    <tspan x="400" dy="0">Bachelor, Computer</tspan>
+    <tspan x="400" dy="86">Science</tspan>
+  </text>
+  <text x="400" y="420" text-anchor="middle" fill="#7dd3fc" font-size="56" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="600">2006 - 2010</text>
+  <text x="400" y="520" text-anchor="middle" fill="#e0f2fe" font-size="44" font-family="system-ui, -apple-system, Segoe UI, sans-serif">Osaka University, Japan</text>
+</svg>

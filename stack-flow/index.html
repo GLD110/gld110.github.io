@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+    <script type="module" crossorigin src="./assets/index-Bt4xYwyN.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-D_th9Vnk.css">
+    <style>
+      html.theme-light body {
+        background: radial-gradient(circle at 20% 0%, #ffffff, #eff4ff 52%) !important;
+        color: #10182b !important;
+      }
+      html.theme-light #app {
+        background:
+          radial-gradient(80% 70% at 20% 10%, rgba(13, 115, 215, 0.09), transparent 60%),
+          radial-gradient(75% 60% at 80% 85%, rgba(114, 86, 255, 0.09), transparent 65%) !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app" class="h-dvh"></div>
+    <canvas id="webgl"></canvas>
+    <script>
+      window.addEventListener("message", function (event) {
+        if (!event.data || event.data.type !== "theme-change") return;
+        var isLight = event.data.theme === "light";
+        document.documentElement.classList.toggle("theme-light", isLight);
+      });
+    </script>
+  </body>
+</html>

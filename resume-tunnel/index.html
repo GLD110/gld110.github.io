@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" data-embed-dark="true">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delphi - Clone yourself</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      html[data-embed-dark="true"],
+      html[data-embed-dark="true"] body {
+        background-color: #050505 !important;
+        color: #e8ecff;
+        overflow-x: hidden;
+      }
+      html[data-embed-dark="false"],
+      html[data-embed-dark="false"] body {
+        background-color: #f6f9ff !important;
+        color: #10182b !important;
+        overflow-x: hidden;
+      }
+      html[data-embed-dark="false"] #root,
+      html[data-embed-dark="false"] #root * {
+        color: #10182b !important;
+        border-color: rgba(16, 24, 43, 0.18) !important;
+      }
+      html[data-embed-dark="false"] #root [class*="bg-black"],
+      html[data-embed-dark="false"] #root [class*="bg-zinc"],
+      html[data-embed-dark="false"] #root [class*="bg-neutral"],
+      html[data-embed-dark="false"] #root [class*="bg-slate"],
+      html[data-embed-dark="false"] #root [class*="bg-gray"] {
+        background-color: #ffffff !important;
+      }
+      html[data-embed-dark="false"] #root [class*="text-white"],
+      html[data-embed-dark="false"] #root [class*="text-zinc"],
+      html[data-embed-dark="false"] #root [class*="text-neutral"],
+      html[data-embed-dark="false"] #root [class*="text-slate"],
+      html[data-embed-dark="false"] #root [class*="text-gray"] {
+        color: #10182b !important;
+      }
+      #root nav,
+      #root footer,
+      #root h1,
+      #root p,
+      #root button,
+      #root a,
+      #root [class*="logo"],
+      #root [id*="logo"] {
+        display: none !important;
+      }
+      .perspective-container {
+        perspective: 1200px;
+        transform-style: preserve-3d;
+      }
+      .preserve-3d {
+        transform-style: preserve-3d;
+      }
+      /* Hide scrollbar for cleaner look during dev, optional */
+      ::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              accent: '#E85D35', // Warm orange/amber from design
+              muted: '#6B6B6B',
+              dark: '#0F0F0F',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+
+<!-- /index.css omitted for iframe embed -->
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "gsap/": "https://esm.sh/gsap@^3.14.2/",
+    "gsap": "https://esm.sh/gsap@^3.14.2",
+    "three": "https://esm.sh/three@0.160.0"
+  }
+}
+</script>
+  <script type="module" crossorigin src="./assets/index-DNVxawDd.js"></script>
+<script>
+  window.addEventListener("message", function (event) {
+    if (!event.data || event.data.type !== "theme-change") return;
+    var isLight = event.data.theme === "light";
+    document.documentElement.setAttribute("data-embed-dark", isLight ? "false" : "true");
+    if (isLight) {
+      document.documentElement.style.backgroundColor = "#f6f9ff";
+      document.body.style.backgroundColor = "#f6f9ff";
+      document.body.style.color = "#10182b";
+    } else {
+      document.documentElement.style.backgroundColor = "#050505";
+      document.body.style.backgroundColor = "#050505";
+      document.body.style.color = "#e8ecff";
+    }
+  });
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+</body>
+</html>

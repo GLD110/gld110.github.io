@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simon Daiki | Portfolio</title>
+    <meta
+      name="description"
+      content="Simon Daiki - Blockchain Engineer and Fullstack Developer portfolio."
+    />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Syne:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <button
+      class="theme-toggle"
+      type="button"
+      aria-label="Switch to light mode"
+      title="Toggle dark/light mode"
+    >
+      <i class="fa-solid fa-moon"></i>
+    </button>
+
+    <button
+      class="mobile-nav-toggle"
+      type="button"
+      aria-label="Toggle navigation"
+      aria-expanded="false"
+      aria-controls="site-side-nav"
+    >
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <aside class="side-nav" aria-label="Section navigation">
+      <nav id="site-side-nav" class="side-links">
+        <a class="active" href="#hero" aria-label="Home" data-label="Home"><i class="fa-solid fa-house"></i></a>
+        <a href="#about" aria-label="About" data-label="About"><i class="fa-regular fa-user"></i></a>
+        <a href="#resume" aria-label="Resume" data-label="Resume"><i class="fa-regular fa-file-lines"></i></a>
+        <a href="#portfolio" aria-label="Portfolio" data-label="Portfolio"><i class="fa-regular fa-window-maximize"></i></a>
+        <a href="#stack" aria-label="Expertise" data-label="Expertise"><i class="fa-solid fa-server"></i></a>
+        <a href="#contact" aria-label="Contact" data-label="Contact"><i class="fa-regular fa-envelope"></i></a>
+      </nav>
+    </aside>
+
+    <main>
+      <section id="hero" class="hero">
+        <iframe
+          class="hero-iframe"
+          title="Interactive Particles Hero"
+          src="./hero-particles/index.html"
+        ></iframe>
+      </section>
+
+      <section id="about" class="section about">
+        <div class="container section-grid">
+          <div>
+            <p class="eyebrow">About</p>
+            <h2>Building Reliable Software Across Web2 and Web3</h2>
+            <p>
+              My name is Simon and I am an experienced full stack development professional. I
+              started as a freelance developer and later built my own service practice to deliver
+              reliable, quality blockchain and fullstack solutions.
+            </p>
+            <p>
+              I focus on practical architecture, clean implementation, and long-term maintenance
+              for startups and growing products.
+            </p>
+            <ul class="quick-facts">
+              <li><strong>Age:</strong> 30+</li>
+              <li><strong>Degree:</strong> BA, Computer Science</li>
+              <li><strong>Email:</strong> simon@daikitech.com</li>
+              <li><strong>Phone:</strong> (213) 495-4828</li>
+            </ul>
+          </div>
+          <div class="mascot-card" aria-label="3D mascot style visual">
+            <iframe
+              class="about-visual-iframe"
+              title="About mascot 3D"
+              src="./about-photo/index.html"
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <section id="resume" class="section resume">
+        <div class="tunnel-panel">
+          <p class="resume-section-label">
+            <span class="resume-section-label__text">Resume &amp; History</span>
+          </p>
+          <iframe
+            class="resume-iframe"
+            title="Resume Delphi Tunnel"
+            src="./resume-tunnel/index.html"
+            loading="lazy"
+          ></iframe>
+        </div>
+      </section>
+
+      <section id="portfolio" class="section portfolio portfolio--iframe">
+        <div class="tunnel-panel">
+          <iframe
+            class="portfolio-iframe"
+            title="Recent Works — isometric portfolio"
+            src="./portfolio-gallery/index.html"
+            loading="lazy"
+          ></iframe>
+        </div>
+      </section>
+
+      <section id="stack" class="section stack stack--iframe">
+        <div class="tunnel-panel">
+          <iframe
+            class="stack-iframe"
+            title="Spotify Visualiser"
+            src="./stack-flow/index.html"
+            loading="lazy"
+          ></iframe>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact">
+        <div class="container">
+          <p class="eyebrow">Contact</p>
+          <h2>Let's Build Something Great</h2>
+          <div class="contact-list">
+            <p><strong>Email:</strong> <a href="mailto:simon@daikitech.com">simon@daikitech.com</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+12134954828">(213) 495-4828</a></p>
+            <p><strong>Location:</strong> Little Tokyo, Los Angeles, CA</p>
+          </div>
+          <div class="site-footer">
+            <p>© <span id="year"></span> Simon Daiki.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

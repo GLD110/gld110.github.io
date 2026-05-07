@@ -1,0 +1,7 @@
+body { margin: 0; overflow: hidden; background-color: #050505; font-family: sans-serif; }
+
+html[data-theme="light"] body {
+  background-color: #f6f9ff;
+}
+
+.lil-gui.root { display: none !important; }

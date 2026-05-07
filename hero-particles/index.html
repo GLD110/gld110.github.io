@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Interactive Particles</title>
+    <meta
+      name="description"
+      content="Interactive particles scene for portfolio hero."
+    />
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/demo1.css" />
+    <style>
+      html[data-theme="light"],
+      html[data-theme="light"] body {
+        background: radial-gradient(circle at 20% 0%, #ffffff, #eff4ff 52%) !important;
+      }
+
+      /* Hide debug/control overlays from the original demo with CSS only. */
+      .controlKit,
+      .controlkit,
+      [class*="controlKit"],
+      [class*="controlkit"],
+      [id*="controlkit"],
+      [id*="controlKit"],
+      body > div[style*="position: fixed"][style*="top: 0px"][style*="left: 0px"],
+      body > div[style*="position:fixed"][style*="top:0"][style*="left:0"],
+      body > div[style*="z-index:10000"],
+      body > div[style*="z-index: 10000"] {
+        display: none !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+        visibility: hidden !important;
+      }
+    </style>
+    <script>
+      document.documentElement.className = "js";
+      document.documentElement.setAttribute("data-theme", "dark");
+      var supportsCssVars = function () {
+        var isSupported;
+        var style = document.createElement("style");
+        style.innerHTML = "root: { --tmp-var: bold; }";
+        document.head.appendChild(style);
+        isSupported = !!(
+          window.CSS &&
+          window.CSS.supports &&
+          window.CSS.supports("font-weight", "var(--tmp-var)")
+        );
+        style.parentNode.removeChild(style);
+        return isSupported;
+      };
+      if (!supportsCssVars()) {
+        alert("Please view this demo in a modern browser that supports CSS Variables.");
+      }
+
+      window.addEventListener("message", function (event) {
+        if (!event.data || event.data.type !== "theme-change") return;
+        document.documentElement.setAttribute("data-theme", event.data.theme === "light" ? "light" : "dark");
+      });
+    </script>
+  </head>
+  <body class="demo-1">
+    <div class="container"></div>
+    <script type="text/javascript" src="scripts/index.65cc8f49a5b9f6d56079.js"></script>
+    <script>
+      // Dispatch synthetic left-click every 2s on the render target.
+      (function () {
+        function mouseEvent(type, x, y) {
+          return new MouseEvent(type, {
+            bubbles: true,
+            cancelable: true,
+            clientX: x,
+            clientY: y,
+            button: 0,
+            buttons: 1,
+          });
+        }
+
+        function clickPulse() {
+          var x = Math.random() * window.innerWidth;
+          var y = Math.random() * window.innerHeight;
+          var canvas = document.querySelector("canvas");
+          var target = canvas || document.querySelector(".container") || document.body;
+
+          target.dispatchEvent(mouseEvent("mousedown", x, y));
+          target.dispatchEvent(mouseEvent("mouseup", x, y));
+          target.dispatchEvent(mouseEvent("click", x, y));
+        }
+
+        setTimeout(function () {
+          clickPulse();
+          setInterval(clickPulse, 5000);
+        }, 1200);
+      })();
+    </script>
+  </body>
+</html>

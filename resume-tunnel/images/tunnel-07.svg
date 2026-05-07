@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0c1a2e"/>
+      <stop offset="50%" stop-color="#0c4a6e"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <radialGradient id="r" cx="15%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#0c1a2e" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="800" fill="url(#g)"/>
+  <rect width="800" height="800" fill="url(#r)"/>
+  <rect x="32" y="32" width="736" height="736" fill="none" stroke="#7dd3fc" stroke-opacity="0.5" stroke-width="5" rx="20"/>
+  <text x="400" y="220" text-anchor="middle" fill="#ffffff" font-size="64" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="700">
+    <tspan x="400" dy="0">Project Manager,</tspan>
+    <tspan x="400" dy="80">Frontend Developer</tspan>
+  </text>
+  <text x="400" y="400" text-anchor="middle" fill="#7dd3fc" font-size="56" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="600">2017 - 2019</text>
+  <text x="400" y="500" text-anchor="middle" fill="#e0f2fe" font-size="44" font-family="system-ui, -apple-system, Segoe UI, sans-serif">XthemeApollo</text>
+</svg>
